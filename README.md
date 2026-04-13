@@ -66,14 +66,15 @@ openspec/
 ### 標準開發流程
 
 ```
-/opsx:propose  →  /opsx:apply  →  /opsx:archive
-     ↑                                  ↓
-  描述想做什麼              封存並同步到 openspec/specs/
+PM 填需求單  →  /opsx:propose  →  /opsx:apply  →  /opsx:archive
+     ↑                                                    ↓
+docs/pm-requirement-template.md            封存並同步到 openspec/specs/
 ```
 
-1. **Propose**：描述你想新增或修改的功能，Claude 會自動產生設計文件與任務清單
-2. **Apply**：Claude 依照任務清單逐一實作程式碼，完成一個打勾一個
-3. **Archive**：完成後封存變更，將 delta spec 同步回 `openspec/specs/`，留下可追溯的歷史紀錄
+1. **PM 填需求單**：依照 [`docs/pm-requirement-template.md`](docs/pm-requirement-template.md) 填寫 Why、AC、Out of Scope 等欄位
+2. **Propose**：將需求單內容貼給 Claude，執行 `/opsx:propose`，自動產生設計文件與任務清單
+3. **Apply**：Claude 依照任務清單逐一實作程式碼，完成一個打勾一個
+4. **Archive**：完成後封存變更，將 delta spec 同步回 `openspec/specs/`，留下可追溯的歷史紀錄
 
 ### 查看現有 Feature
 

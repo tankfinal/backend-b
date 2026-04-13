@@ -1,20 +1,24 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  Tech stack: Spring Boot 3 + Java 17 (backend), React + TypeScript + Vite (frontend), MySQL, Docker Compose
+  Domain: Internal BE Manager dashboard for Jira workload tracking
+  Team: Backend Team B, XREX
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Must include a "Why" section explaining the business motivation or user pain point
+    - Must include at least 3 Acceptance Criteria (AC), each written as a verifiable condition (e.g., "GIVEN...WHEN...THEN" or "User can...")
+    - Must include an "Out of Scope" section listing what this change explicitly does NOT cover
+    - Must include an "Impact" section stating which layers are affected (frontend / backend / DB / infra)
+    - If any AC is ambiguous or missing, ask the PM/requester to clarify before proceeding
+    - Do not generate AC on behalf of the requester — ask them to provide it
+
+  design:
+    - Every design decision must include a rationale and at least one rejected alternative
+    - Must reference the AC from the proposal and explain how the design satisfies each one
+
+  tasks:
+    - Each task must be independently verifiable (i.e., can be checked done without running the whole feature)
+    - Tasks should be scoped to a single file or concern where possible
+    - Estimate no task larger than half a day of work; split if needed
