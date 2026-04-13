@@ -65,8 +65,9 @@
 
 | 欄位 | 填寫 |
 |------|------|
-| 主要 Ticket | [PROJ-XXX](https://xrex.atlassian.net/browse/PROJ-XXX) |
-| 相關 Ticket | [PROJ-YYY](https://xrex.atlassian.net/browse/PROJ-YYY)（選填） |
+| PROP（提案 / 產品需求） | [PROP-XXX](https://xrex.atlassian.net/browse/PROP-XXX) |
+| TF（Task Force / 執行票） | [TF-XXX](https://xrex.atlassian.net/browse/TF-XXX) |
+| XRAY（測試計畫） | [XRAY-XXX](https://xrex.atlassian.net/browse/XRAY-XXX)（選填） |
 | 優先級 | P0 / P1 / P2 |
 | 期望上線日 | YYYY-MM-DD |
 
