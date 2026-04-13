@@ -1,0 +1,11 @@
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/dto/WorkloadResponseDto.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/service/WorkloadService.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/service/JiraService.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/repository/WorkloadCacheRepository.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/entity/WorkloadCache.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/dto/MemberWorkloadDto.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/repository/TeamMemberRepository.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/DashboardApplication.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/entity/TeamMember.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/config/AppConfig.java
+/Users/tankyang/CursorProjects/repositories/backend-b/backend/src/main/java/com/team/dashboard/controller/WorkloadController.java

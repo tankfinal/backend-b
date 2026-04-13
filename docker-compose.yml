@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: team-b-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: team_dashboard
+      MYSQL_USER: dashboard_user
+      MYSQL_PASSWORD: dashboard_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    container_name: team-b-backend
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/team_dashboard
+      DB_USERNAME: dashboard_user
+      DB_PASSWORD: dashboard_pass
+      JIRA_BASE_URL: ${JIRA_BASE_URL}
+      JIRA_API_TOKEN: ${JIRA_API_TOKEN}
+      JIRA_USER_EMAIL: ${JIRA_USER_EMAIL}
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend
+    container_name: team-b-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+
+volumes:
+  mysql_data:
